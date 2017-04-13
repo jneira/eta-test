@@ -1,18 +1,8 @@
 {-# LANGUAGE MagicHash,TypeFamilies,DataKinds,FlexibleContexts #-}
 module Main where
+import Network.Wai
 import Java
 
-data {-# CLASS "network.wai.servlet.WaiServlet extends javax.servlet.GenericServlet" #-}
-  WaiServlet = WaiServlet (Object# WaiServlet) deriving Class
-data {-# CLASS "javax.servlet.ServletResponse" #-} ServletResponse =
-  ServletResponse (Object# ServletResponse) deriving Class
-data {-# CLASS "javax.servlet.ServletRequest" #-} ServletRequest =
-  ServletRequest (Object# ServletRequest) deriving Class
-
-
-service :: ServletRequest -> ServletResponse -> Java WaiServlet () 
-service = undefined
-
-foreign export java service :: ServletRequest -> ServletResponse -> Java WaiServlet ()
-
-main = undefined
+main = print $ [show $ requestMethod r, show $ httpVersion r,
+                show $ rawPathInfo r, show $ rawQueryString r]
+  where r = defaultRequest
