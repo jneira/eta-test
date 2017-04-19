@@ -13,8 +13,13 @@ foreign import java unsafe "@static Utils.trace"
    trace :: Ptr Word8 -> Int -> Int -> IO ()
 
 main = do
-  print nullPtr
+  putStrLn $ "nullPtr: " ++ show nullPtr
   let (fptr,offset,length) = BSInt.toForeignPtr B.empty
   withForeignPtr fptr $ \ ptr -> do
     trace ptr offset length
-    print ptr
+    putStrLn $ "ptr: " ++ show ptr
+    putStrLn $ "ptr == nullPtr " ++ (show $ nullPtr == ptr)
+  putStrLn $ "ByteString.empty: " ++  show B.empty
+  putStrLn $ "Wai request: " ++ show defaultRequest
+  
+   
