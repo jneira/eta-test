@@ -2,6 +2,7 @@
 module Main where
 import qualified Data.ByteString              as B
 import Network.Wai
+import Network.Socket
 import GHC.Base
 import Data.Word (Word8)
 import Foreign.Ptr (Ptr,nullPtr)
@@ -21,5 +22,5 @@ main = do
     putStrLn $ "ptr == nullPtr " ++ (show $ nullPtr == ptr)
   putStrLn $ "ByteString.empty: " ++  show B.empty
   putStrLn $ "Wai request: " ++ show defaultRequest
-  
+  print $ SockAddrInet6 0 0 (tupleToHostAddress6 (0,0,0,0,0,0,0,0)) 0 
    
