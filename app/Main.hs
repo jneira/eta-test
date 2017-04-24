@@ -1,6 +1,8 @@
-{-# LANGUAGE MagicHash,TypeFamilies,DataKinds,FlexibleContexts #-}
+{-# LANGUAGE MagicHash,TypeFamilies,DataKinds,
+    FlexibleContexts,OverloadedStrings #-}
 module Main where
 import qualified Data.ByteString              as B
+import Network.HTTP.Types as H
 import Network.Wai
 import Network.Socket
 import GHC.Base
@@ -23,4 +25,5 @@ main = do
   putStrLn $ "ByteString.empty: " ++  show B.empty
   putStrLn $ "Wai request: " ++ show defaultRequest
   print $ SockAddrInet6 0 0 (tupleToHostAddress6 (0,0,0,0,0,0,0,0)) 0 
-   
+  --print $ H.decodePathSegments "/my/path"
+  print $ H.parseQuery "a=1&b=2"
