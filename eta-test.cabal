@@ -22,6 +22,7 @@ executable eta-test
   build-depends:       base >=4.8 && <4.9
                      , blaze-builder
                      , bytestring
+                     , text
                      , utf8-string == 1.0.1.1
                      , network
                      , http-types

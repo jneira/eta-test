@@ -1,21 +1,27 @@
 {-# LANGUAGE MagicHash,TypeFamilies,DataKinds,
     FlexibleContexts,OverloadedStrings #-}
 module Main where
-import qualified Data.ByteString              as B
-import Network.HTTP.Types as H
 import Network.Wai
+import Network.HTTP.Types as H
 import Network.Socket
-import GHC.Base
 import Data.Word (Word8)
+import Data.Text as T
+import Data.Text.Encoding
+import Data.Text.Encoding.Error
+import qualified Data.ByteString              as B
+import qualified Data.ByteString.Internal as BSInt
 import Foreign.Ptr (Ptr,nullPtr)
 import Foreign.ForeignPtr (ForeignPtr,newForeignPtr_,withForeignPtr)
-import qualified Data.ByteString.Internal as BSInt
+import GHC.Base
 import Java
 
 foreign import java unsafe "@static Utils.trace"
    trace :: Ptr Word8 -> Int -> Int -> IO ()
 
 main = do
+  print $ decodeUtf8With strictDecode "SomeBytestringStrict"
+  --print $ decodeUtf8With lenientDecode "SomeBytestringLenient"
+  {-
   putStrLn $ "nullPtr: " ++ show nullPtr
   let (fptr,offset,length) = BSInt.toForeignPtr B.empty
   withForeignPtr fptr $ \ ptr -> do
@@ -25,5 +31,6 @@ main = do
   putStrLn $ "ByteString.empty: " ++  show B.empty
   putStrLn $ "Wai request: " ++ show defaultRequest
   print $ SockAddrInet6 0 0 (tupleToHostAddress6 (0,0,0,0,0,0,0,0)) 0 
-  --print $ H.decodePathSegments "/my/path"
+  print $ H.decodePathSegments "/my/path"
   print $ H.parseQuery "a=1&b=2"
+  -}
