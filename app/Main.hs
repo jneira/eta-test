@@ -19,9 +19,6 @@ foreign import java unsafe "@static Utils.trace"
    trace :: Ptr Word8 -> Int -> Int -> IO ()
 
 main = do
-  print $ decodeUtf8With strictDecode "SomeBytestringStrict"
-  --print $ decodeUtf8With lenientDecode "SomeBytestringLenient"
-  {-
   putStrLn $ "nullPtr: " ++ show nullPtr
   let (fptr,offset,length) = BSInt.toForeignPtr B.empty
   withForeignPtr fptr $ \ ptr -> do
@@ -33,4 +30,4 @@ main = do
   print $ SockAddrInet6 0 0 (tupleToHostAddress6 (0,0,0,0,0,0,0,0)) 0 
   print $ H.decodePathSegments "/my/path"
   print $ H.parseQuery "a=1&b=2"
-  -}
+
