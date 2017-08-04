@@ -13,7 +13,9 @@ public class Utils {
         byte[] bytes = new byte[] {};
         long address = MemoryManager.allocateBuffer(bytes.length,false);
         System.out.println("Address: "+address);
-        ByteBuffer buf = MemoryManager.getBoundedBuffer(address);
+        ByteBuffer buf = MemoryManager.getBuffer(address);
         System.out.println("Buffer: "+buf);
+        buf = MemoryManager.getBoundedBuffer(address);
+        System.out.println("Bounded Buffer: "+buf);
     }
 }
