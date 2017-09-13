@@ -1,12 +1,15 @@
 {-# LANGUAGE MagicHash,TypeFamilies,DataKinds,
     FlexibleContexts,OverloadedStrings #-}
 module Main where
-import GHC.Base
-import Java
+import Data.Text
+import Data.Text.Encoding
+import Data.Text.Encoding.Error
 
-foreign import java unsafe "@static Utils.testEmptyBuffer"
-  testEmptyBuffer :: IO ()
-
-main = testEmptyBuffer
-  
+main = do
+  putStrLn "\xf1"
+  putStrLn "ñ"
+  putStrLn "\xc3\xb1"
+  print $ decodeUtf8With lenientDecode "ñ"
+  print $ decodeUtf8With lenientDecode "añ"
+  print $ decodeUtf8With strictDecode "ñ"
 
