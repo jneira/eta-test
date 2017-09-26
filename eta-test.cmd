@@ -6,5 +6,5 @@ if defined JAVA_HOME (
   set ETA_JAVA_PROG=%JAVA_HOME%\bin\%ETA_JAVA_PROG%
 )
 
-"%ETA_JAVA_PROG%"  -classpath "%DIR%\eta-test.launcher.jar" %JAVA_ARGS% %JAVA_OPTS% eta.main %*
+"%ETA_JAVA_PROG%" %JAVA_ARGS% %JAVA_OPTS% %ETA_ARGS% -classpath "%DIR%\eta-test.launcher.jar" eta.main %*
 
