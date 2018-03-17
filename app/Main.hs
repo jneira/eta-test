@@ -25,25 +25,3 @@ main = do
 
   catchJavaIOError (EX.throw ioEx) $ putStrLn . show
   catchJavaIOError (readFile "x" >> return ()) $ putStrLn . show
-{-
-  r <- SysIOErr.tryIOError (EX.throwIO ioEx)
-  case r of
-    Right() -> return ()
-    Left err -> putStrLn $ EX.displayException err
-  (r :: Either JException ()) <- EX.try (EX.throwIO ex)
-  case r of
-    Right() -> return ()
-    Left err -> putStrLn $ EX.displayException err
-  (r :: Either EX.IOException ()) <- EX.try (EX.throwIO ioEx)
-  case r of
-    Right() -> return ()
-    Left err -> putStrLn $ EX.displayException err
---  r <- SysIOErr.tryIOError (EX.throwIO ex)
---  case r of
---    Right() -> return ()
---    Left err -> putStrLn $ EX.displayException err
-  (r :: Either JException ()) <- EX.try (EX.throwIO ioEx)
-  case r of
-    Right() -> return ()
-    Left err -> putStrLn $ EX.displayException err  
--}
