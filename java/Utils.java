@@ -1,5 +1,6 @@
 import java.nio.ByteBuffer;
 import eta.runtime.io.MemoryManager;
+import eta_test.Lib;
 
 public class Utils {
     public static void trace(ByteBuffer buf,int offset, int length) {
@@ -15,6 +16,12 @@ public class Utils {
         System.out.println("Address: "+address);
         ByteBuffer buf = MemoryManager.getBoundedBuffer(address);
         System.out.println("Bounded Buffer: "+buf);
+    }
+
+    public static void main(String args[]) throws Exception {
+        System.out.println("======== RUNNING  ===============");
+        Lib.foo();
+        System.out.println("=================================");
     }
 
 }

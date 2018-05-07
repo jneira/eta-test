@@ -1,3 +1,6 @@
 module Lib where
 
-test = 0
+foreign export java
+ foo :: IO ()
+foo = putStrLn "Hi"
+
