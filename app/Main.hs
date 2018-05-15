@@ -1,5 +1,7 @@
 {-# LANGUAGE MagicHash,TypeFamilies,DataKinds,
     FlexibleContexts,OverloadedStrings, ScopedTypeVariables #-}
 module Main where
-
-main = putStrLn "Hi"
+import Lib
+main = do
+  testEmptyBuffer
+  
