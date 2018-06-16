@@ -22,6 +22,7 @@ public class Utils {
         System.out.println("======== RUNNING  ===============");
         Lib.foo();
         System.out.println("=================================");
+        System.out.println(Lib.getInt(1));
     }
 
 }
