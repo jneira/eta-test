@@ -6,15 +6,28 @@ import Java
 import Control.Exception
 import Data.Either
 
--- ffi export IO () is implicitly static
+-- ffi export using IO ()
 
-foreign export java foo :: IO ()
+foreign export java "@static eta_test.Lib.exportedFoo" foo :: IO ()
 foo = putStrLn "Hi"
+
+-- ffi export using IO a
+
+foreign export java "@static eta_test.Lib.exportedBar" bar :: IO Int
+bar = return 0
 
 -- ffi export static standard
 
 foreign export java "@static eta_test.Lib.getInt" getInt :: Int -> Java a Int
 getInt i = return $ i + 2
+
+
+-- An ffi export instance method of the module! It generates a instance method for eta_test.Lib class
+-- However, this can't be called from java cause the generated class has no constructors
+
+foreign export java instanceMethod :: Int -> Java a Int
+instanceMethod i = return $ i + 2
+
 
 -- ffi export instance method for subclass
 
