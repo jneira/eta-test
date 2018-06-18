@@ -3,5 +3,4 @@
 module Main where
 import Lib
 main = do
-  testEmptyBuffer
-  
+  putStrLn "Hi"  
