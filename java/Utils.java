@@ -4,11 +4,16 @@ public class Utils {
     public static void main(String args[]) throws Exception {
         System.out.println("======== RUNNING  ===============");
         Lib.exportedFoo();
-        System.out.println(Lib.exportedBar());
+        System.out.println("Bar:"+Lib.exportedBar());
+        System.out.println("Baz:"+Lib.exportedBaz());
         EtaData d = new EtaData();
         d.setCounter(10);
         System.out.println(d.addToCounter(1));
         System.out.println(d.getCounter());
+        // System.out.println(d.addToCounterIO(2));
+        // System.out.println(d.getCounter());
+        // System.out.println(d.addToCounterInt(3));
+        // System.out.println(d.getCounter());
         System.out.println();
         // This does not work, Lib has no constructors
         // Lib myLib = new Lib();

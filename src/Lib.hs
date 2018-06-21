@@ -16,6 +16,11 @@ foo = putStrLn "Hi"
 foreign export java "@static eta_test.Lib.exportedBar" bar :: IO Int
 bar = return 0
 
+-- ffi export using a type
+
+foreign export java "@static eta_test.Lib.exportedBaz" baz :: Int
+baz = 1
+
 -- ffi export static standard
 
 foreign export java "@static eta_test.Lib.getInt" getInt :: Int -> Java a Int
@@ -43,12 +48,25 @@ foreign import java unsafe getCounter :: Java EtaData Int
 
 foreign import java unsafe setCounter :: Int -> Java EtaData ()
 
-foreign export java addToCounter :: Int -> Java EtaData Int
+addToCounter :: Int -> Java EtaData Int
 addToCounter a = do
   c <- getCounter
   let c' = c + a
   setCounter c'
   return c' 
+
+foreign export java addToCounter :: Int -> Java EtaData Int
+
+-- addToCounterIO :: EtaData -> Int -> IO Int
+-- addToCounterIO obj a = javaWith obj $ addToCounter a
+
+-- foreign export java addToCounterIO :: EtaData -> Int ->  IO Int
+
+-- addToCounterInt :: EtaData -> Int -> Int
+-- addToCounterInt obj a = unsafePerformJavaWith EtaData  obj $ addToCounter a
+
+-- foreign export java addToCounterInt :: EtaData -> Int ->  Int
+
 
 -- ffi export static method with lambdas (Consumer)  as parameters
 
