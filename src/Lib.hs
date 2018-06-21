@@ -57,17 +57,6 @@ addToCounter a = do
 
 foreign export java addToCounter :: Int -> Java EtaData Int
 
--- addToCounterIO :: EtaData -> Int -> IO Int
--- addToCounterIO obj a = javaWith obj $ addToCounter a
-
--- foreign export java addToCounterIO :: EtaData -> Int ->  IO Int
-
--- addToCounterInt :: EtaData -> Int -> Int
--- addToCounterInt obj a = unsafePerformJavaWith EtaData  obj $ addToCounter a
-
--- foreign export java addToCounterInt :: EtaData -> Int ->  Int
-
-
 -- ffi export static method with lambdas (Consumer)  as parameters
 
 newtype ParseError = ParseError String 

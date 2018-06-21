@@ -10,10 +10,6 @@ public class Utils {
         d.setCounter(10);
         System.out.println(d.addToCounter(1));
         System.out.println(d.getCounter());
-        // System.out.println(d.addToCounterIO(2));
-        // System.out.println(d.getCounter());
-        // System.out.println(d.addToCounterInt(3));
-        // System.out.println(d.getCounter());
         System.out.println();
         // This does not work, Lib has no constructors
         // Lib myLib = new Lib();
