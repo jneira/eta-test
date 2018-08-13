@@ -2,5 +2,8 @@
     FlexibleContexts,OverloadedStrings, ScopedTypeVariables #-}
 module Main where
 import Lib
+import Java
+
 main = do
-  putStrLn "Hi"  
+  i <- java $ createAndUseEtaCounter
+  putStrLn $ "The value is " ++ show i  

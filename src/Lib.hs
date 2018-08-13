@@ -70,6 +70,14 @@ decrement x = do
 
 foreign export java decrement :: Int -> Java EtaCounter Int
 
+foreign import java unsafe "@new" newEtaCounter  :: Java a EtaCounter
+
+createAndUseEtaCounter :: Java a Int
+createAndUseEtaCounter = do
+  c <- newEtaCounter
+  c <.> (set 10)
+  c <.> get
+
 -- ffi export static method with lambdas (Consumer)  as parameters
 
 newtype ParseError = ParseError String
@@ -89,6 +97,4 @@ foreign export java "@static eta_test.Lib.jparse" jparse :: JString -> Consumer 
 jparse str err ok = case parse $ fromJString str of
   Left (ParseError errStr) -> err <.> (accept $ toJString errStr)
   Right str -> ok <.> (accept $ toJString str)
-
-
 
