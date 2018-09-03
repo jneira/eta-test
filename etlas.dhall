@@ -23,6 +23,7 @@ in  let commonDeps =
               (prelude.orLaterVersion (v "4.8"))
               (prelude.earlierVersion (v "4.12"))
             )
+		  , pkg "aeson" prelude.anyVersion
           ]
 
 in  let updateRepo =
@@ -51,6 +52,7 @@ in  updateRepo
             v "0.1.0.0"
         , cabal-version =
             v "1.12"
+	    , extra-source-files = [ "eta-test.cabal" ] : List Text
         , library =
             prelude.unconditional.library
             (   prelude.defaults.Library
