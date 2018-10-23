@@ -15,6 +15,11 @@ build-type:          Simple
 -- extra-source-files:  
 cabal-version:       1.12
 
+source-repository this
+  type: git
+  location: https://github.com/jneira/eta-test
+  tag: eta-test-etlas
+
 library
   exposed-modules:     Lib
   -- other-modules:       
