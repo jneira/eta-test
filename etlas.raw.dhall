@@ -23,7 +23,6 @@ in  let commonDeps =
               (prelude.orLaterVersion (v "4.8"))
               (prelude.earlierVersion (v "4.12"))
             )
-          , pkg "aeson" prelude.anyVersion
           ]
 
 in  let updateRepo =
