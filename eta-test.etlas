@@ -18,7 +18,7 @@ cabal-version:       1.12
 source-repository this
   type: git
   location: https://github.com/jneira/eta-test
-  tag: eta-test-etlas
+  tag: 0.1.0.0
 
 library
   exposed-modules:     Lib
