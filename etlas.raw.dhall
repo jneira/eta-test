@@ -31,7 +31,7 @@ in  let updateRepo =
           (   λ(srcRepo : types.SourceRepo)
             →   srcRepo
               ⫽ { tag =
-                    [ "0.1.0.0" ] : Optional Text
+                    [ "etlas-dhall" ] : Optional Text
                 , kind =
                     prelude.types.RepoKind.RepoThis {=}
                 }
