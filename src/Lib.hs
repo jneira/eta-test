@@ -113,11 +113,10 @@ foreign import java unsafe "@static @field eta.example.Counter.numCounters"
 foreign import java unsafe "@static @field eta.example.Counter.numCounters" 
   setNumCounters'' :: Int -> ()
 
+-- foreign import java unsafe "@static @field eta.example.Counter.numCounters" 
+--  setNumCounters''' :: Int -> Java a ()
+
 foreign import java unsafe "@static @field eta.example.Counter.numCounters" 
   getNumCounters :: Java a Int
 
--- Test for https://github.com/typelead/eta/issues/892
 
-foreign export java "@static eta.example.Foreign.test" jinput
-  :: (ja <: Object) => ja -> IO ja
-jinput ja = java $ return ja

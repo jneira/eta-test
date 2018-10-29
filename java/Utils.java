@@ -1,6 +1,7 @@
 import eta.example.MyClass;
 import eta.example.Numbers;
 import eta.example.Counter;
+import eta.example.Foreign;
 import eta.example.EtaCounter;
 
 public class Utils {
@@ -19,6 +20,8 @@ public class Utils {
         // This does not work, Lib has no constructors
         // Lib myLib = new Lib();
         // System.out.println(myLib.instanceMethod(1));
+        System.out.println(Foreign.test("hola"));
+        
         System.out.println("=================================");
     }
 
