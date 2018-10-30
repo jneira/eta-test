@@ -20,7 +20,7 @@ public class Utils {
         // This does not work, Lib has no constructors
         // Lib myLib = new Lib();
         // System.out.println(myLib.instanceMethod(1));
-        System.out.println(Foreign.test("hola"));
+        System.out.println(Foreign.testExport("hola","adios"));
         
         System.out.println("=================================");
     }

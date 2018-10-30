@@ -1,2 +1,6 @@
 dist 
 *.class 
+/target/
+.classpath
+.project
+.settings

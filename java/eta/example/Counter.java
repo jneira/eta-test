@@ -29,4 +29,8 @@ public class Counter {
     this.counter = Math.min(value, COUNTER_MAX);
     this.publicCounter = counter;
   }
+
+  public static <A> A testImport(String test) {
+      return null;
+  }
 }
