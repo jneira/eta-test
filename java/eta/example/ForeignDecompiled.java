@@ -12,7 +12,6 @@ import eta.runtime.stg.Closure;
 import eta.runtime.stg.Stg;
 import eta.runtime.stg.StgContext;
 import eta.runtime.thunk.Ap2Upd;
-import eta.runtime.thunk.Ap3Upd;
 import eta.runtime.thunk.Ap4Upd;
 import eta.runtime.thunk.Ap5Upd;
 import ghc_prim.ghc.Classes;

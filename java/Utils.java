@@ -3,6 +3,7 @@ import eta.example.Numbers;
 import eta.example.Counter;
 import eta.example.Foreign;
 import eta.example.ForeignDecompiled;
+import eta.example.ForeignSimple;
 import eta.example.EtaCounter;
 
 public class Utils {
@@ -21,11 +22,18 @@ public class Utils {
         // This does not work, Lib has no constructors
         // Lib myLib = new Lib();
         // System.out.println(myLib.instanceMethod(1));
+        System.out.println(ForeignSimple.testExport("hola", "adios"));
         System.out.println(ForeignDecompiled.testExport("hola", "adios"));
         System.out.println(ForeignDecompiled.testExport("hola", Integer.valueOf("1")));
         System.out.println(ForeignDecompiled.testExportSuper("hola", "adios"));
         System.out.println(ForeignDecompiled.testExportSuper("hola", Integer.valueOf("1")));
         System.out.println(ForeignDecompiled.testExportSuperTwo(
+        		Double.valueOf("1.2"), Integer.valueOf(3)));
+        System.out.println(Foreign.testExport("hola", "adios"));
+        System.out.println(Foreign.testExport("hola", Integer.valueOf("1")));
+        System.out.println(Foreign.testExportSuper("hola", "adios"));
+        System.out.println(Foreign.testExportSuper("hola", Integer.valueOf("1")));
+        System.out.println(Foreign.testExportSuperTwo(
         		Double.valueOf("1.2"), Integer.valueOf(3)));
         //System.out.println(Foreign.testExport("hola","adios"));
         //System.out.println(Foreign.testExportSuper("hola","adios"));

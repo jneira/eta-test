@@ -30,10 +30,3 @@ jtestExportSuperTwo x y = java $ return res
   where res :: JInteger = toJava ( intValue x + intValue y )
 {-# NOINLINE jtestExportSuperTwo #-}
 
-
-foreign export java "@static eta.example.Foreign.testExportSuperStr" jtestExportSuperStr
-  :: JString  -> IO Object
-
-jtestExportSuperStr :: JString  -> IO Object
-jtestExportSuperStr str = jtestExportSuper str str2
-  where str2 :: JString = str

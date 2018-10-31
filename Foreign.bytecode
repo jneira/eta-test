@@ -1,0 +1,184 @@
+Classfile /D:/ws/eta/eta-test/Foreign.class
+  Last modified 01-ene-2010; size 1717 bytes
+  MD5 checksum 3537ffa6c2b072f4466c3d9a0e83ebaf
+public class eta.example.Foreign
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Class              #2             // eta/example/Foreign
+   #2 = Utf8               eta/example/Foreign
+   #3 = Class              #4             // java/lang/Object
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Methodref          #3.#8          // java/lang/Object."<init>":()V
+   #8 = NameAndType        #5:#6          // "<init>":()V
+   #9 = Utf8               testExportSuperTwo
+  #10 = Utf8               (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Integer;
+  #11 = Class              #12            // java/lang/Number
+  #12 = Utf8               java/lang/Number
+  #13 = Class              #14            // eta/runtime/thunk/Ap2Upd
+  #14 = Utf8               eta/runtime/thunk/Ap2Upd
+  #15 = Methodref          #16.#18        // base/ghc/TopHandler.runIO:()Leta/runtime/stg/Closure;
+  #16 = Class              #17            // base/ghc/TopHandler
+  #17 = Utf8               base/ghc/TopHandler
+  #18 = NameAndType        #19:#20        // runIO:()Leta/runtime/stg/Closure;
+  #19 = Utf8               runIO
+  #20 = Utf8               ()Leta/runtime/stg/Closure;
+  #21 = Class              #22            // eta/runtime/stg/Closure
+  #22 = Utf8               eta/runtime/stg/Closure
+  #23 = Class              #24            // eta/runtime/thunk/Ap3Upd
+  #24 = Utf8               eta/runtime/thunk/Ap3Upd
+  #25 = Methodref          #26.#28        // eta_test/Foreign.$fe_jtestExportSuperTwo:()Leta/runtime/stg/Closure;
+  #26 = Class              #27            // eta_test/Foreign
+  #27 = Utf8               eta_test/Foreign
+  #28 = NameAndType        #29:#20        // $fe_jtestExportSuperTwo:()Leta/runtime/stg/Closure;
+  #29 = Utf8               $fe_jtestExportSuperTwo
+  #30 = Class              #31            // base/java/wrappers/datacons/JNumber
+  #31 = Utf8               base/java/wrappers/datacons/JNumber
+  #32 = Methodref          #30.#33        // base/java/wrappers/datacons/JNumber."<init>":(Ljava/lang/Number;)V
+  #33 = NameAndType        #5:#34         // "<init>":(Ljava/lang/Number;)V
+  #34 = Utf8               (Ljava/lang/Number;)V
+  #35 = Methodref          #23.#36        // eta/runtime/thunk/Ap3Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #36 = NameAndType        #5:#37         // "<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #37 = Utf8               (Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #38 = Methodref          #13.#39        // eta/runtime/thunk/Ap2Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #39 = NameAndType        #5:#40         // "<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #40 = Utf8               (Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+  #41 = Methodref          #42.#44        // eta/runtime/Runtime.evalIO:(Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+  #42 = Class              #43            // eta/runtime/Runtime
+  #43 = Utf8               eta/runtime/Runtime
+  #44 = NameAndType        #45:#46        // evalIO:(Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+  #45 = Utf8               evalIO
+  #46 = Utf8               (Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+  #47 = Class              #48            // base/java/wrappers/datacons/JInteger
+  #48 = Utf8               base/java/wrappers/datacons/JInteger
+  #49 = Fieldref           #47.#50        // base/java/wrappers/datacons/JInteger.x1:Ljava/lang/Integer;
+  #50 = NameAndType        #51:#52        // x1:Ljava/lang/Integer;
+  #51 = Utf8               x1
+  #52 = Utf8               Ljava/lang/Integer;
+  #53 = Class              #54            // java/lang/Integer
+  #54 = Utf8               java/lang/Integer
+  #55 = Utf8               Signature
+  #56 = Utf8               <X:Ljava/lang/Number;Y:Ljava/lang/Number;>(TX;TY;)Ljava/lang/Integer;
+  #57 = Utf8               testExportSuper
+  #58 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+  #59 = Class              #60            // java/lang/String
+  #60 = Utf8               java/lang/String
+  #61 = Methodref          #26.#62        // eta_test/Foreign.$fe_jtestExportSuper:()Leta/runtime/stg/Closure;
+  #62 = NameAndType        #63:#20        // $fe_jtestExportSuper:()Leta/runtime/stg/Closure;
+  #63 = Utf8               $fe_jtestExportSuper
+  #64 = Class              #65            // ghc_prim/ghc/types/datacons/JSzh
+  #65 = Utf8               ghc_prim/ghc/types/datacons/JSzh
+  #66 = Methodref          #64.#67        // ghc_prim/ghc/types/datacons/JSzh."<init>":(Ljava/lang/String;)V
+  #67 = NameAndType        #5:#68         // "<init>":(Ljava/lang/String;)V
+  #68 = Utf8               (Ljava/lang/String;)V
+  #69 = Class              #70            // ghc_prim/ghc/types/datacons/Ozh
+  #70 = Utf8               ghc_prim/ghc/types/datacons/Ozh
+  #71 = Methodref          #69.#72        // ghc_prim/ghc/types/datacons/Ozh."<init>":(Ljava/lang/Object;)V
+  #72 = NameAndType        #5:#73         // "<init>":(Ljava/lang/Object;)V
+  #73 = Utf8               (Ljava/lang/Object;)V
+  #74 = Fieldref           #69.#75        // ghc_prim/ghc/types/datacons/Ozh.x1:Ljava/lang/Object;
+  #75 = NameAndType        #51:#76        // x1:Ljava/lang/Object;
+  #76 = Utf8               Ljava/lang/Object;
+  #77 = Utf8               <Je:Ljava/lang/Object;>(Ljava/lang/String;TJe;)Ljava/lang/Object;
+  #78 = Utf8               testExport
+  #79 = Methodref          #26.#80        // eta_test/Foreign.$fe_jtestExport:()Leta/runtime/stg/Closure;
+  #80 = NameAndType        #81:#20        // $fe_jtestExport:()Leta/runtime/stg/Closure;
+  #81 = Utf8               $fe_jtestExport
+  #82 = Utf8               <Je:Ljava/lang/Object;>(Ljava/lang/String;TJe;)TJe;
+  #83 = Utf8               Code
+  #84 = Utf8               StackMapTable
+  #85 = Utf8               LineNumberTable
+{
+  public eta.example.Foreign();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #7                  // Method java/lang/Object."<init>":()V
+         4: return
+
+  public static <X extends java.lang.Number, Y extends java.lang.Number> java.lang.Integer testExportSuperTwo(X, Y);
+    descriptor: (Ljava/lang/Number;Ljava/lang/Number;)Ljava/lang/Integer;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=10, locals=2, args_size=2
+         0: new           #13                 // class eta/runtime/thunk/Ap2Upd
+         3: dup
+         4: invokestatic  #15                 // Method base/ghc/TopHandler.runIO:()Leta/runtime/stg/Closure;
+         7: new           #23                 // class eta/runtime/thunk/Ap3Upd
+        10: dup
+        11: invokestatic  #25                 // Method eta_test/Foreign.$fe_jtestExportSuperTwo:()Leta/runtime/stg/Closure;
+        14: new           #30                 // class base/java/wrappers/datacons/JNumber
+        17: dup
+        18: aload_0
+        19: invokespecial #32                 // Method base/java/wrappers/datacons/JNumber."<init>":(Ljava/lang/Number;)V
+        22: new           #30                 // class base/java/wrappers/datacons/JNumber
+        25: dup
+        26: aload_1
+        27: invokespecial #32                 // Method base/java/wrappers/datacons/JNumber."<init>":(Ljava/lang/Number;)V
+        30: invokespecial #35                 // Method eta/runtime/thunk/Ap3Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        33: invokespecial #38                 // Method eta/runtime/thunk/Ap2Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        36: invokestatic  #41                 // Method eta/runtime/Runtime.evalIO:(Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+        39: checkcast     #47                 // class base/java/wrappers/datacons/JInteger
+        42: getfield      #49                 // Field base/java/wrappers/datacons/JInteger.x1:Ljava/lang/Integer;
+        45: areturn
+    Signature: #56                          // <X:Ljava/lang/Number;Y:Ljava/lang/Number;>(TX;TY;)Ljava/lang/Integer;
+
+  public static <Je extends java.lang.Object> java.lang.Object testExportSuper(java.lang.String, Je);
+    descriptor: (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=10, locals=2, args_size=2
+         0: new           #13                 // class eta/runtime/thunk/Ap2Upd
+         3: dup
+         4: invokestatic  #15                 // Method base/ghc/TopHandler.runIO:()Leta/runtime/stg/Closure;
+         7: new           #23                 // class eta/runtime/thunk/Ap3Upd
+        10: dup
+        11: invokestatic  #61                 // Method eta_test/Foreign.$fe_jtestExportSuper:()Leta/runtime/stg/Closure;
+        14: new           #64                 // class ghc_prim/ghc/types/datacons/JSzh
+        17: dup
+        18: aload_0
+        19: invokespecial #66                 // Method ghc_prim/ghc/types/datacons/JSzh."<init>":(Ljava/lang/String;)V
+        22: new           #69                 // class ghc_prim/ghc/types/datacons/Ozh
+        25: dup
+        26: aload_1
+        27: invokespecial #71                 // Method ghc_prim/ghc/types/datacons/Ozh."<init>":(Ljava/lang/Object;)V
+        30: invokespecial #35                 // Method eta/runtime/thunk/Ap3Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        33: invokespecial #38                 // Method eta/runtime/thunk/Ap2Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        36: invokestatic  #41                 // Method eta/runtime/Runtime.evalIO:(Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+        39: checkcast     #69                 // class ghc_prim/ghc/types/datacons/Ozh
+        42: getfield      #74                 // Field ghc_prim/ghc/types/datacons/Ozh.x1:Ljava/lang/Object;
+        45: areturn
+    Signature: #77                          // <Je:Ljava/lang/Object;>(Ljava/lang/String;TJe;)Ljava/lang/Object;
+
+  public static <Je extends java.lang.Object> Je testExport(java.lang.String, Je);
+    descriptor: (Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=10, locals=2, args_size=2
+         0: new           #13                 // class eta/runtime/thunk/Ap2Upd
+         3: dup
+         4: invokestatic  #15                 // Method base/ghc/TopHandler.runIO:()Leta/runtime/stg/Closure;
+         7: new           #23                 // class eta/runtime/thunk/Ap3Upd
+        10: dup
+        11: invokestatic  #79                 // Method eta_test/Foreign.$fe_jtestExport:()Leta/runtime/stg/Closure;
+        14: new           #64                 // class ghc_prim/ghc/types/datacons/JSzh
+        17: dup
+        18: aload_0
+        19: invokespecial #66                 // Method ghc_prim/ghc/types/datacons/JSzh."<init>":(Ljava/lang/String;)V
+        22: new           #69                 // class ghc_prim/ghc/types/datacons/Ozh
+        25: dup
+        26: aload_1
+        27: invokespecial #71                 // Method ghc_prim/ghc/types/datacons/Ozh."<init>":(Ljava/lang/Object;)V
+        30: invokespecial #35                 // Method eta/runtime/thunk/Ap3Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        33: invokespecial #38                 // Method eta/runtime/thunk/Ap2Upd."<init>":(Leta/runtime/stg/Closure;Leta/runtime/stg/Closure;)V
+        36: invokestatic  #41                 // Method eta/runtime/Runtime.evalIO:(Leta/runtime/stg/Closure;)Leta/runtime/stg/Closure;
+        39: checkcast     #69                 // class ghc_prim/ghc/types/datacons/Ozh
+        42: getfield      #74                 // Field ghc_prim/ghc/types/datacons/Ozh.x1:Ljava/lang/Object;
+        45: areturn
+    Signature: #82                          // <Je:Ljava/lang/Object;>(Ljava/lang/String;TJe;)TJe;
+}
