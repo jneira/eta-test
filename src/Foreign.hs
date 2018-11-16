@@ -30,3 +30,6 @@ jtestExportSuperTwo x y = java $ return res
   where res :: JInteger = toJava ( intValue x + intValue y )
 {-# NOINLINE jtestExportSuperTwo #-}
 
+foreign export java "@static eta.example.Foreign.testJByteArray"
+  jtestJByteArray :: JByteArray
+jtestJByteArray = undefined
