@@ -2,8 +2,7 @@
              TypeOperators, ScopedTypeVariables  #-}
 
 module Foreign where
-import Java.Core
-import Java.Wrappers
+import Java
 
 foreign import java "@static eta.example.Counter.testImport" jtestImport
  :: (ji <: Object) => JString -> ji
@@ -31,5 +30,5 @@ jtestExportSuperTwo x y = java $ return res
 {-# NOINLINE jtestExportSuperTwo #-}
 
 foreign export java "@static eta.example.Foreign.testJByteArray"
-  jtestJByteArray :: JByteArray
-jtestJByteArray = undefined
+  jtestJByteArray :: List JInteger -> JByteArray
+jtestJByteArray _ = unsafePerformJava (anew 0)
