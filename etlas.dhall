@@ -22,7 +22,6 @@ let commonDeps =
           (prelude.orLaterVersion (v "4.8"))
           (prelude.earlierVersion (v "4.12"))
         )
-      , pkg "aeson" prelude.anyVersion
       ]
 
 let updateRepo =
@@ -48,7 +47,7 @@ in  updateRepo
         , maintainer =
             "Javier Neira Sanchez <atreyu.bbb@gmail.com>"
         , version =
-            v "0.1.0.0"
+            v "0.2.0.0"
         , cabal-version =
             v "1.12"
         , extra-source-files =
