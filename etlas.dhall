@@ -29,7 +29,7 @@ let updateRepo =
       (   λ(srcRepo : types.SourceRepo)
         →   srcRepo
           ⫽ { tag =
-                [ "0.1.0.0" ] : Optional Text
+                [ "0.2.0.0" ] : Optional Text
             , kind =
                 types.RepoKind.RepoThis {=}
             }
