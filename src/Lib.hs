@@ -5,6 +5,7 @@ module Lib where
 import Java
 import Control.Exception
 import Data.Either
+import Java.Collections
 
 -- ffi export using IO ()
 
@@ -119,4 +120,21 @@ foreign import java unsafe "@static @field eta.example.Counter.numCounters"
 foreign import java unsafe "@static @field eta.example.Counter.numCounters" 
   getNumCounters :: Java a Int
 
+data StreamingServiceFactory = StreamingServiceFactory @com.example.StreamingServiceFactory
+  deriving Class
 
+foreign import java unsafe "@new" newStreamingServiceFactory :: Properties -> Java a StreamingServiceFactory
+
+data StreamingService = StreamingService @com.example.StreamingService
+  deriving Class
+
+foreign import java unsafe createStreamingService :: Java StreamingServiceFactory StreamingService
+
+createStreamingFactory :: Java a StreamingService
+createStreamingFactory = do
+  let props = toJava [ ("streaming.host","host")
+                     , ("streaming.port","port") ]
+  factory <- newStreamingServiceFactory props
+  factory <.> createStreamingService  
+  
+  

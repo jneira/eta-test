@@ -1,9 +1,11 @@
 {-# LANGUAGE TypeFamilies,DataKinds,FlexibleContexts,
-             TypeOperators, ScopedTypeVariables  #-}
+             TypeOperators, ScopedTypeVariables #-}
 
 module Foreign where
+import Data.Word
 import Java.Core
 import Java.Wrappers
+import Java.Array
 
 foreign import java "@static eta.example.Counter.testImport" jtestImport
  :: (ji <: Object) => JString -> ji
@@ -32,4 +34,8 @@ jtestExportSuperTwo x y = java $ return res
 
 foreign export java "@static eta.example.Foreign.testJByteArray"
   jtestJByteArray :: JByteArray
-jtestJByteArray = undefined
+jtestJByteArray = toJava ([1,2] :: [Word8])
+
+foreign export java "@static eta.example.Foreign.testJByteArrayId"
+  jtestJByteArrayId :: JByteArray -> JByteArray
+jtestJByteArrayId a = a

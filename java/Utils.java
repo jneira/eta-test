@@ -38,6 +38,7 @@ public class Utils {
         //System.out.println(Foreign.testExport("hola","adios"));
         //System.out.println(Foreign.testExportSuper("hola","adios"));
         System.out.println(Foreign.testJByteArray());
+        System.out.println(Foreign.testJByteArrayId(new byte[] {1}));
         System.out.println("=================================");
     }
 
