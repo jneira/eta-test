@@ -6,6 +6,7 @@ import Data.Word
 import Java.Core
 import Java.Wrappers
 import Java.Array
+import Java.Collections
 
 foreign import java "@static eta.example.Counter.testImport" jtestImport
  :: (ji <: Object) => JString -> ji
@@ -39,3 +40,7 @@ jtestJByteArray = toJava ([1,2] :: [Word8])
 foreign export java "@static eta.example.Foreign.testJByteArrayId"
   jtestJByteArrayId :: JByteArray -> JByteArray
 jtestJByteArrayId a = a
+
+jtestJByteArrayList :: List JInteger -> JByteArray
+jtestJByteArrayList _ = unsafePerformJava (anew 0)
+
