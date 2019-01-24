@@ -2,3 +2,5 @@ dist
 *.class
 output**.txt
 *.old
+.project
+.classpath
