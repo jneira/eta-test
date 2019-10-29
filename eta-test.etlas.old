@@ -13,16 +13,18 @@ maintainer:          atreyu.bbb@gmail.com
 -- category:            
 build-type:          Simple
 -- extra-source-files:  
-cabal-version:       1.12
+cabal-version:       >=1.10
 
 library
   exposed-modules:     Lib
+                       Foreign
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.8 && < 4.9
-                     , aeson
   hs-source-dirs:      src
   default-language:    Haskell2010
+  java-sources:        java/eta/example/Counter.java
+  ghc-options:         -g  -ddump-tc-trace -ddump-foreign -ddump-stg -ddump-cg-trace -ddump-to-file
 
 executable eta-test-prog
   main-is:             Main.hs
@@ -32,3 +34,8 @@ executable eta-test-prog
                      , eta-test
   hs-source-dirs:      app
   default-language:    Haskell2010
+  java-sources:        java/Utils.java
+                     , java/eta/example/ForeignDecompiled.java
+                     , java/eta/example/ForeignSimple.java
+                     , java/eta/example/Counter.java
+  ghc-options:        -g  -ddump-tc-trace -ddump-foreign -ddump-stg -ddump-cg-trace -ddump-to-file
