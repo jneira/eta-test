@@ -1,3 +1,6 @@
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.Executors;
+
 import eta.example.MyClass;
 import eta.example.Numbers;
 import eta.example.Counter;
@@ -39,6 +42,32 @@ public class Utils {
         //System.out.println(Foreign.testExportSuper("hola","adios"));
         System.out.println(Foreign.testJByteArray());
         System.out.println(Foreign.testJByteArrayId(new byte[] {1}));
+        System.out.println("=================================");
+
+        System.out.println("====== RUNNING MULTI-THREAD =====");
+        ThreadPoolExecutor threadPool = (ThreadPoolExecutor) Executors.newFixedThreadPool(100);
+
+        long t0 = System.currentTimeMillis();
+
+        for (int i = 0; i < 10; i++) {
+            threadPool.execute(new Thread() {
+                @Override
+                public void run() {
+                     MyClass.sayHelloTo("Javier");
+                }
+            });
+        }
+
+        threadPool.shutdown();
+        try {
+            threadPool.awaitTermination(Long.MAX_VALUE, TimeUnit.MINUTES);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        long t1 = System.currentTimeMillis();
+
+        System.out.println("Time: " + (t1 - t0));
         System.out.println("=================================");
     }
 

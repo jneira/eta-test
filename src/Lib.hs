@@ -12,6 +12,9 @@ import Java.Collections
 foreign export java "@static eta.example.MyClass.sayHello" sayHelloEta :: IO ()
 sayHelloEta = putStrLn "Hi"
 
+foreign export java "@static eta.example.MyClass.sayHelloTo" sayHelloEta :: String -> IO ()
+sayHelloEta who = putStrLn ("Hi, " ++ who)
+
 -- ffi export using IO a
 
 foreign export java "@static eta.example.Numbers.zero" zero :: IO Int
