@@ -1,8 +1,8 @@
 let prelude =
-      https://raw.githubusercontent.com/eta-lang/dhall-to-etlas/master/dhall/prelude.dhall sha256:079be4d5b0cccd4d3e3ef03369c86770864eb56dc28afcdfb5f52280dcaf9f3e
+      https://raw.githubusercontent.com/eta-lang/dhall-to-etlas/master/dhall/prelude.dhall sha256:70cd34dd7884336f82875950a74076bac538eb511b83703f5818a1d50cbe0dea
 
 let types =
-      https://raw.githubusercontent.com/eta-lang/dhall-to-etlas/master/dhall/types.dhall sha256:7f440b74d4e727ccaaee1a714bd290b4fe92d5cd018f3a3a5ab218dc2b1e7a8b
+      https://raw.githubusercontent.com/eta-lang/dhall-to-etlas/master/dhall/types.dhall sha256:f1376671820900d7e97de52f5803f1279d5052c2b8db47896fb0bfa33e254f0a
 
 let v = prelude.v
 
@@ -20,7 +20,6 @@ let commonDeps =
           (prelude.orLaterVersion (v "4.8"))
           (prelude.earlierVersion (v "4.12"))
         )
-      , pkg "aeson" prelude.anyVersion
       ]
 
 let updateRepo =
@@ -28,7 +27,7 @@ let updateRepo =
       (   λ(srcRepo : types.SourceRepo)
         →   srcRepo
           ⫽ { tag =
-                [ "0.1.0.0" ] : Optional Text
+                Some "0.1.0.1"
             , kind =
                 types.RepoKind.RepoThis
             }
